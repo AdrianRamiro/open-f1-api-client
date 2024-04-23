@@ -20,3 +20,9 @@ export const findBy = async (filters: OpenF1Driver) => {
 
   return data as OpenF1Driver[]
 }
+
+export const findOne = async (filters: OpenF1Driver) => {
+  const data = await findBy(filters)
+
+  return data[0] as OpenF1Driver
+}

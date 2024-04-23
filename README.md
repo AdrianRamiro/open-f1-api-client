@@ -1,6 +1,22 @@
-# open-f1-api-client
+# OpenF1 API Client
 
-This template should help get you started developing with Vue 3 in Vite.
+OpenF1 API Client is a web application that allows users to view information about the Formula 1 World Championship. The application is built with Vue 3 and Vite.
+
+Based on the standard Vue 3 create template, the project includes the following features:
+
+- Onion architecture, with the API client and the UI decoupled.
+  - Services are used to fetch data from the API.
+  - Data layer provides a consistent interface to the API where in future releases, the API client can be replaced with a different implementation and optimizations can be made, like caching.
+- Unit tests with Vitest and end-to-end tests with Playwright. Some tests are included as examples.
+- Since the decoupled architecture, service and data layers could be moved to a separate package and shared between multiple projects, regardless of the UI framework used.
+- Data layer can be extended to include more endpoints and data transformations, like POST/PUT/DELETE requests, or GraphQL queries.
+
+## Roadmap
+
+- Implement a caching mechanism. (memoize API calls, store data in local storage, etc.)
+- Implement the rest of the Open F1 API endpoints.
+- Implement a UI components library.
+- Implement a charts library, like Chart.js or D3.js, to display data in a more interactive way.
 
 ## Recommended IDE Setup
 

@@ -22,3 +22,9 @@ export const findBy = async (filters: OpenF1Session) => {
 
   return data as OpenF1Session[]
 }
+
+export const findOne = async (filters: OpenF1Session) => {
+  const data = await findBy(filters)
+
+  return data[0] as OpenF1Session
+}

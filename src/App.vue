@@ -5,14 +5,14 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <img alt="F1 DataStream" class="logo" src="@/assets/logo.webp" width="256" height="256" />
 
     <div class="wrapper">
       <HelloWorld msg="OpenF1 API client" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/session-time-series-car">Session time-series by car</RouterLink>
       </nav>
     </div>
   </header>
@@ -23,6 +23,7 @@ import HelloWorld from './components/HelloWorld.vue'
 <style scoped>
 header {
   line-height: 1.5;
+  margin-top: 2rem;
   max-height: 100vh;
 }
 
@@ -59,6 +60,7 @@ nav a:first-of-type {
 @media (min-width: 1024px) {
   header {
     display: flex;
+    flex-direction: column;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
@@ -69,8 +71,8 @@ nav a:first-of-type {
 
   header .wrapper {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    place-items: center;
+    flex-direction: column-reverse;
   }
 
   nav {
